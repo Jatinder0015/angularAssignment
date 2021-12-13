@@ -1,0 +1,57 @@
+.staffDashboard {
+
+    .StaffHeading {
+        color:#6a4462;
+        font-size:30px !important;
+        text-align: center;
+        text-transform:uppercase;
+        margin-top:5px;
+        letter-spacing:2px
+    }
+
+    .hrLine{
+        border-width: 5px;
+        border-color: #6a4462;
+    }
+
+    .CheckInServiceButton{
+        background-color: #6a4462;
+        color: whitesmoke;
+        width: 500px;
+        height: 30px;
+        // font-size:30px !important;
+        // text-align: center;
+        text-transform:uppercase;
+        padding-top:4px !important;
+        letter-spacing:50px !important
+    }
+
+    .InFlightServiceButton{
+        background-color: #6a4462;
+        color: whitesmoke;
+        width: 500px;
+        height: 30px;
+        // font-size:30px !important;
+        // text-align: center;
+        text-transform:uppercase;
+        padding-top:4px !important;
+        letter-spacing:50px !important
+    }
+
+    .CheckInServiceImg{
+        // width: 600px;
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-top: -150px !important;
+    }
+
+    
+    .InFlightServiceImg{
+        // width: 600px;
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-top: -140px !important;
+    }
+
+}
+

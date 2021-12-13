@@ -1,0 +1,47 @@
+<mat-card class="staffDashboard">
+    <div class="StaffHeading">
+        <h1> WELCOME TO THE DASHBOARD </h1>
+    </div>
+    <hr class="hrLine">
+
+    <!-- Buttons -->
+    <mat-grid-list cols="2" rowHeight="4rem">
+        <mat-grid-tile>
+            <!-- <a routerLink="/staff/check-in-services"> -->
+                <button mat-raised-button class="CheckInServiceButton" (click)="btnClick();">
+                    <h4>White Flower</h4>
+                </button>
+            <!-- </a> -->
+
+        </mat-grid-tile>
+
+
+
+        <mat-grid-tile>
+            <button mat-raised-button class="InFlightServiceButton">
+                <h4>Red Flower</h4>
+            </button>
+        </mat-grid-tile>
+
+    </mat-grid-list>
+
+   
+
+
+
+    <!-- Photos -->
+    <mat-grid-list cols="2">
+        <mat-grid-tile>
+            <img mat-card-image class="CheckInServiceImg" src="./../../../../assets/img/f4.jpg"
+                alt="homePagePhoto">
+        </mat-grid-tile>
+
+
+        <mat-grid-tile>
+            <img mat-card-image class="InFlightServiceImg" src="./../../../../assets/img/f22.jpg"
+                alt="homePagePhoto">
+        </mat-grid-tile>
+
+    </mat-grid-list>
+
+</mat-card>

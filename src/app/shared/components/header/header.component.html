@@ -1,0 +1,22 @@
+<mat-toolbar class="navbar">
+  <!-- <span>Sky Airlines</span> -->
+  <!-- <mat-typography variant="h5" style="color: white;"> Sky Airlines</mat-typography> -->
+  <a href=""><h6 class="headerName">Flowers</h6> </a>
+  <span class="example-spacer"></span>
+
+  <div *ngIf="isLoggedIn == 'false'">
+    <button mat-button (click)="login()" class="logInButton">
+      Login 
+    </button> 
+   <span style="color: #fff">|</span>
+    <button mat-button (click)="signup(signup)" class="logInButton">
+     Signup
+    </button> 
+
+  </div>
+  <div *ngIf="isLoggedIn == 'true'">
+    <button mat-button (click)="logout()" class="logOutButton">
+      LOGOUT
+    </button>
+  </div>
+</mat-toolbar>

@@ -1,0 +1,191 @@
+<!-- <button type="button" mdbBtn color="default" rounded="true" data-toggle="modal" data-target="#basicExample"
+        (click)="show1()" mdbWavesEffect>Launch Modal
+</button> -->
+
+<!-- <div  #myDiv (click)="sendMessage()">
+    hlo
+</div> -->
+<div type="hidden" id="auto_trigger1" (click)="frame.show()"></div>
+
+<div mdbModal #frame="mdbModal" class="modal fade top" id="frameModalTop" tabindex="-1" role="dialog"
+  aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <!--Content-->
+    <div class="modal-content form-elegant">
+      <!--Header-->
+      <div class="modal-header text-center">
+        <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel">
+          <strong>SIGN IN</strong>
+        </h3>
+        <button type="button" id="closeModal1" class="close" data-dismiss="modal" aria-label="Close"
+          (click)="frame.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <!--Body-->
+
+      <div class="modal-body mx-4">
+
+        <!--Body-->
+        <!-- <form [formGroup]="user"> -->
+        <div class="md-form mb-5">
+          <input type="email" id="Form-email1" class="form-control" mdbInput mdbValidate [formControl]="userEmail">
+          <label for="Form-email1">Your email</label>
+          <mdb-error *ngIf="userEmail.invalid && (userEmail.dirty || userEmail.touched)">
+            Invalid Input
+          </mdb-error>
+          <mdb-success *ngIf="userEmail.valid && (userEmail.dirty || userEmail.touched)">
+            Looks Good!
+          </mdb-success>
+        </div>
+
+        <div class="md-form pb-3">
+          <input type="password" id="Form-pass1" class="form-control" mdbInput mdbValidate [formControl]="userPassword">
+          <label for="Form-pass1">Your password</label>
+          <mdb-error *ngIf="userPassword.invalid && (userPassword.dirty || userPassword.touched)">
+            Password length should be greter than 5
+          </mdb-error>
+          <mdb-success *ngIf="userPassword.valid && (userPassword.dirty || userPassword.touched)">
+            Looks Good!
+          </mdb-success>
+          <!-- <p class="font-small blue-text d-flex justify-content-end">Forgot
+            <a href="#" class="blue-text ml-1"> Password?</a>
+          </p> -->
+        </div>
+
+        <div class="text-center mb-3">
+          <button [disabled]="userEmail.invalid || userPassword.invalid" type="button" id="signInButton"
+            (click)="Login()" mdbBtn gradient="#6a4462" block="true" rounded="true"
+            class="z-depth-1a rounded-pill waves-light" mdbWavesEffect>Sign in
+          </button>
+        </div>
+
+        <!-- </form> -->
+        <!-- <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign in
+          with:</p> -->
+
+        <!-- <div class="row my-3 d-flex justify-content-center">
+        
+          <button type="button" mdbBtn color="white" class="mr-md-3 z-depth-1a rounded-pill waves-light" mdbWavesEffect>
+            <mdb-icon fab icon="facebook-f" class="text-center"></mdb-icon>
+          </button>
+        
+          <button type="button" mdbBtn color="white" rounded="true" class="mr-md-3 z-depth-1a rounded-pill waves-light"
+            mdbWavesEffect>
+            <mdb-icon fab icon="twitter"></mdb-icon>
+          </button>
+        
+          <button type="button" mdbBtn color="white" rounded="true" class="z-depth-1a rounded-pill waves-light"
+            mdbWavesEffect>
+            <mdb-icon fab icon="google-plus"></mdb-icon>
+          </button>
+        </div> -->
+      </div>
+      <!--Footer-->
+      <!-- <div class="modal-footer mx-5 pt-3 mb-1">
+        <p class="font-small grey-text d-flex justify-content-end">Not a member?
+          <a href="#" class="blue-text ml-1"> Sign Up</a>
+        </p>
+      </div> -->
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+
+
+<div type="hidden" id="auto_trigger" (click)="frame1.show()"></div>
+
+<div mdbModal #frame1="mdbModal" class="modal fade top" id="frameModalTop" tabindex="-1" role="dialog"
+  aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <!--Content-->
+    <div class="modal-content form-elegant">
+      <!--Header-->
+      <div class="modal-header text-center">
+        <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel">
+          <strong>SIGN UP</strong>
+        </h3>
+        <button type="button" id="closeModal2" class="close" data-dismiss="modal" aria-label="Close"
+          (click)="frame1.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <!--Body-->
+
+      <div class="modal-body mx-4">
+
+        <!--Body-->
+        <!-- <form [formGroup]="user"> -->
+        <div class="md-form mb-5">
+          <input type="email" id="Form-email1" class="form-control" mdbInput mdbValidate [formControl]="userNameForSignup">
+          <label for="Form-email1">User Name</label>
+          <mdb-error *ngIf="userNameForSignup.invalid && (userNameForSignup.dirty || userNameForSignup.touched)">
+            Invalid Input
+          </mdb-error>
+          <mdb-success *ngIf="userNameForSignup.valid && (userNameForSignup.dirty || userNameForSignup.touched)">
+            Looks Good!
+          </mdb-success>
+        </div>
+        <div class="md-form mb-5">
+          <input type="email" id="Form-email1" class="form-control" mdbInput mdbValidate [formControl]="userEmailForSignup">
+          <label for="Form-email1">Your email</label>
+          <mdb-error *ngIf="userEmailForSignup.invalid && (userEmailForSignup.dirty || userEmailForSignup.touched)">
+            Invalid Input
+          </mdb-error>
+          <mdb-success *ngIf="userEmailForSignup.valid && (userEmailForSignup.dirty || userEmailForSignup.touched)">
+            Looks Good!
+          </mdb-success>
+        </div>
+
+        <div class="md-form pb-3">
+          <input type="password" id="Form-pass1" class="form-control" mdbInput mdbValidate [formControl]="userPasswordForSignup">
+          <label for="Form-pass1">Your password</label>
+          <mdb-error *ngIf="userPasswordForSignup.invalid && (userPasswordForSignup.dirty || userPasswordForSignup.touched)">
+            Password length should be greter than 5
+          </mdb-error>
+          <mdb-success *ngIf="userPasswordForSignup.valid && (userPasswordForSignup.dirty || userPasswordForSignup.touched)">
+            Looks Good!
+          </mdb-success>
+          <!-- <p class="font-small blue-text d-flex justify-content-end">Forgot
+            <a href="#" class="blue-text ml-1"> Password?</a>
+          </p> -->
+        </div>
+
+        <div class="text-center mb-3">
+          <button [disabled]="userNameForSignup.invalid || userEmailForSignup.invalid || userPasswordForSignup.invalid" type="button" id="signInButton"
+            (click)="Signup()" mdbBtn gradient="#6a4462" block="true" rounded="true"
+            class="z-depth-1a rounded-pill waves-light" mdbWavesEffect>Sign Up
+          </button>
+        </div>
+
+        <!-- </form> -->
+        <!-- <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign in
+          with:</p> -->
+
+        <!-- <div class="row my-3 d-flex justify-content-center">
+        
+          <button type="button" mdbBtn color="white" class="mr-md-3 z-depth-1a rounded-pill waves-light" mdbWavesEffect>
+            <mdb-icon fab icon="facebook-f" class="text-center"></mdb-icon>
+          </button>
+        
+          <button type="button" mdbBtn color="white" rounded="true" class="mr-md-3 z-depth-1a rounded-pill waves-light"
+            mdbWavesEffect>
+            <mdb-icon fab icon="twitter"></mdb-icon>
+          </button>
+        
+          <button type="button" mdbBtn color="white" rounded="true" class="z-depth-1a rounded-pill waves-light"
+            mdbWavesEffect>
+            <mdb-icon fab icon="google-plus"></mdb-icon>
+          </button>
+        </div> -->
+      </div>
+      <!--Footer-->
+      <!-- <div class="modal-footer mx-5 pt-3 mb-1">
+        <p class="font-small grey-text d-flex justify-content-end">Not a member?
+          <a href="#" class="blue-text ml-1"> Sign Up</a>
+        </p>
+      </div> -->
+    </div>
+    <!--/.Content-->
+  </div>
+</div>

@@ -1,0 +1,50 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+//   .backForwardButtons {
+//     margin-right: 1120px;
+//   }
+  
+  .navbar {
+    background-color: #6a4462 !important;
+  
+    // #630163 4c004c  514D4D  504E4E 6a4462
+    // position: static;
+  
+    .logInButton {
+    //   margin-right: 250% !important;
+      // color: white !important;
+      // font-size: 18px !important;
+    //   position: absolute;
+    color:#fff;
+    font-size:18px;
+    text-transform:uppercase;
+    margin-top:5px;
+    letter-spacing:2px
+    }
+  
+    .logOutButton {
+    //   margin-left: 90%;
+      // color: white !important;
+      // font-size: 18px !important;
+    //   position: absolute;
+    color:#fff;
+    font-size:18px;
+    text-transform:uppercase;
+    margin-top:5px;
+    letter-spacing:2px
+    }
+  }
+
+.headerName
+{
+  color:#fff;
+  font-size:22px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+  
+  
+  
